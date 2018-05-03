@@ -105,17 +105,18 @@
   <meta name="description" content="深度学习（Deep Learning）是机器学习（Machine Learning）的一大分支，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层对数据进行高层抽象的处理。 逻辑回归（Logistic Regression,又称logistic[回归分析])，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的">
 <meta name="keywords" content="Deep Learning,Python,Machine Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="passage0">
+<meta property="og:title" content="深度学习（1）：逻辑回归">
 <meta property="og:url" content="http://yoursite.com/2018/04/28/深度学习/index.html">
 <meta property="og:site_name" content="Simba&#39;s  Blog">
 <meta property="og:description" content="深度学习（Deep Learning）是机器学习（Machine Learning）的一大分支，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层对数据进行高层抽象的处理。 逻辑回归（Logistic Regression,又称logistic[回归分析])，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="c:/Users/xinfu/Desktop/82e16446ly1fjers3qr63j20r706e41q.jpg">
-<meta property="og:updated_time" content="2018-04-28T15:58:46.860Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82e16446ly1fjers3qr63j20r706e41q.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82e16446ly1fjet6mny7nj20fd05laa2.jpg">
+<meta property="og:updated_time" content="2018-05-01T16:12:55.099Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="passage0">
+<meta name="twitter:title" content="深度学习（1）：逻辑回归">
 <meta name="twitter:description" content="深度学习（Deep Learning）是机器学习（Machine Learning）的一大分支，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层对数据进行高层抽象的处理。 逻辑回归（Logistic Regression,又称logistic[回归分析])，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的">
-<meta name="twitter:image" content="c:/Users/xinfu/Desktop/82e16446ly1fjers3qr63j20r706e41q.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82e16446ly1fjers3qr63j20r706e41q.jpg">
 
 
 
@@ -132,7 +133,7 @@
   };
 </script>
 
-  <title>passage0 | Simba's  Blog</title>
+  <title>深度学习（1）：逻辑回归 | Simba's  Blog</title>
   
 
 
@@ -317,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">passage0
+          <h1 class="post-title" itemprop="name headline">深度学习（1）：逻辑回归
               
             
           </h1>
@@ -342,12 +343,24 @@
                 
               
 
-              <time title="创建时间：2018-04-28 21:09:32 / 修改时间：23:58:46" itemprop="dateCreated datePublished" datetime="2018-04-28T21:09:32+08:00">2018-04-28</time>
+              <time title="创建时间：2018-04-28 21:09:32" itemprop="dateCreated datePublished" datetime="2018-04-28T21:09:32+08:00">2018-04-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-02 00:12:55" itemprop="dateModified" datetime="2018-05-02T00:12:55+08:00">2018-05-02</time>
               
             
           </span>
@@ -383,7 +396,13 @@
         <p><strong>深度学习（Deep Learning）</strong>是<strong>机器学习（Machine Learning）</strong>的一大分支，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层对数据进行高层抽象的处理。</p>
 <p><strong>逻辑回归（Logistic Regression,又称logistic[回归分析])</strong>，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的概率等。</p>
 <h1 id="符号约定"><a href="#符号约定" class="headerlink" title="符号约定"></a>符号约定</h1><p>逻辑回归一般用于<strong>二分类（Binary Classification）</strong>问题中，给定一些输入，输出结果是离散值。例如用逻辑回归实现一个猫分类器，输入一张图片<strong>x</strong>，预测图片是否为猫，输出该图片中存在猫的概率结果<strong>y</strong>。</p>
-<p><img src="C:\Users\xinfu\Desktop\82e16446ly1fjers3qr63j20r706e41q.jpg" alt="82e16446ly1fjers3qr63j20r706e41q"></p>
+<p><img src="https://ws1.sinaimg.cn/large/82e16446ly1fjers3qr63j20r706e41q.jpg" alt="猫分类器"></p>
+<p>一张图片在计算机中以RGB编码方式存储，一张彩色图片有红绿蓝三个信道。例如图中猫图由 64 ✖ 64 个像素点组成，在单独的信道上表示为64✖64 的矩阵。</p>
+<p>机器学习中处理一些数据都需要将数据表示为相应的特征向量，为了将上图表示为一个特征向量<strong>x</strong> ，需要将三个信道中三种颜色的值重组，最终得到<strong>nx=64✖64✖3=12288</strong>维的向量<strong>x</strong></p>
+<p><img src="https://ws1.sinaimg.cn/large/82e16446ly1fjet6mny7nj20fd05laa2.jpg" alt="特征向量x"></p>
+<p>实现一个猫分类器需要大量的图片，取其中大部分为<strong>训练样本</strong>，少部分为<strong>测试样本</strong> 。将其都已上述方式表示为特征向量的形式，一个样本由一对<strong>（x,y）</strong> 进行表示，其中<strong>x</strong>为<strong>nx</strong>维特征向量，<strong>y</strong>为<strong>标签（Label）</strong> ，根据判断图片是猫还是不是猫，值为1或0。m个训练样本将被表示为 </p>
+<p>  $${(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),…,(x^{(m)},y^{(m)})}$$</p>
+<p>将训练集的中的特征向量x(1)x(1)、x(2)x(2)…以及它们的标签y(1)y(1)、y(2)y(2)…分别堆叠起来，组成两个矩阵XX、YY：</p>
 
       
     </div>
@@ -663,7 +682,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共218字</span>
+  <span class="post-count">博客全站共517字</span>
 </div>
         
 
@@ -810,6 +829,13 @@ var jiathis_config={
   
 
   
+  
+
+  
+  
+
+  
+
 
   
   
